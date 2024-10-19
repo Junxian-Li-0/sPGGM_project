@@ -2,6 +2,6 @@ The implement of sPGGM on TCGA-UCEC data is shown as examples in this project. T
 
 Running pipeline: main.m
 
-Input data: UCEC_normal.txt, UCEC_tumor.txt, Gene_network.txt; 
+Input data: UCEC_normal.txt, UCEC_tumor.txt, Gene_network.txt;
 
-outputdata: L_sPGGM.mat
+outputdata: the local sPGGM matrix L_sPGGM.mat and the curve of global sPGGM
