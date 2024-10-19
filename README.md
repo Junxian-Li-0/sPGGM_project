@@ -1,8 +1,7 @@
-# sPGGM_project
+The implement of sPGGM on TCGA-UCEC data is shown as examples in this project. The input data can be changed with theother datasets if necessary.
 
-#### UCEC_sample.rar
-The TCGA-UCEC dataset
-#### Gene_network.txt  
-PPI network
-#### main.m  
-The main program of the sPGGM
+Running pipeline: main.m
+
+Input data: UCEC_normal.txt, UCEC_tumor.txt, Gene_network.txt; 
+
+outputdata: L_sPGGM.mat
