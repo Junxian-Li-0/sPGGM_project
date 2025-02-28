@@ -1,9 +1,9 @@
 ## sPGGM
 
-a sample-perturbed Gaussian graphical model for identifying pre-disease stages and signaling molecules of disease progression
+A sample-perturbed Gaussian graphical model for identifying pre-disease stages and signaling molecules of disease progression
 
 ## Usage
-Download the source codes and unzip the UCEC_sample.rar. The code has been tested in Matlab R2021b
+Download the source codes and unzip the UCEC_sample.rar. The code has been tested in Matlab R2021b.
 
 The implement of sPGGM on TCGA-UCEC dataset is shown as examples in this project. The input data can be changed with theother datasets if necessary.
 
