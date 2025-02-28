@@ -1,3 +1,6 @@
+### Usage
+
+
 The implement of sPGGM on TCGA-UCEC data is shown as examples in this project. The input data can be changed with theother datasets if necessary.
 
 Running pipeline: main.m
