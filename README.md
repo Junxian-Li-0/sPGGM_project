@@ -6,7 +6,7 @@ The proposed sPGGM constructs candidate detection stages at the single-sample le
 
 
 ## Usage
-Download the source codes and upzip the data.rar.
+Download the source codes and upzip the data.zip.
 ### Examples
 The TCGA-UCEC dataset consists of 434 tumor samples and 35 adjacent tumor samples. Based on the corresponding clinical information of TCGA, tumor samples are classified into different stages:  stage IA (167 samples), stage IB (148 samples), stage IC (25 samples), stage IIA (6 samples), stage IIB (13 samples), stage IIIA (40 samples), stage IIIB (6 samples), and stage IV (29 samples). The gene expression profiling data can be accessed at: https://portal.gdc.cancer.gov/projects/TCGA-UCEC. The UCEC data is saved in '../data/'.
 
@@ -20,7 +20,7 @@ Execute the MATLAB Live Script: main.mlx, which has been tested successfully in 
 local_sPGGM = get_LocalsPGGM(case_data,ref_data,network_path);
 %% case_data: gene expression matrix of time-series case samples
 %% ref_data: gene expression matrix of reference samples
-%% network_path: the local network filepath constructed in step1
+%% network_path: the local network file e.g. UCEC_Gene_network.txt
 ```
 case_data and ref_data figure
 ```matlab
