@@ -27,6 +27,7 @@ local_sPGGM = get_LocalsPGGM(case_data,ref_data,network_path);
 ```matlab
 sPGGM = calc_GlobalsPGGM(local_sPGGM,count,patient_label,patient_num);
 %% local_sPGGM: the output matrix from get_LocalsPGGM function
+%% count: signaling molecules num
 %% patient_label: the output array from get_stage function
 %% patient_num: the output array from get_stage function
 ```
