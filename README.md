@@ -23,7 +23,7 @@ Input: All gene, e.g. UCEC_gene.txt
 Output: The local network file constructed by PPI network——Gene_network.txt
 
 ### Step2 Calculate sPGGM score to identify the pre-disease stage
-Execute the MATLAB Live Script: main.mlx
+Execute the MATLAB Live Script: main.mlx, which has been tested successfully in Matlab R2021b.
 ### Usage
 ```matlab
 local_sPGGM = get_LocalsPGGM(case_data,ref_data,network_path);
