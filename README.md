@@ -45,5 +45,6 @@ Output: survival curves(survival.png), which shows a significant difference in p
 Jiayuan Zhong, Junxian Li, et al. sPGGM: a sample-perturbed Gaussian graphical model for identifying pre-disease stages and signaling molecules of disease progression
 
 ## Contact
-Junxian Li: junxianli0103@163.com
 Jiayuan Zhong: Zjiayuan@foshan.edu.cn
+
+Junxian Li: junxianli0103@163.com
