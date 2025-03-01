@@ -22,7 +22,8 @@ local_sPGGM = get_LocalsPGGM(case_data,ref_data,network_path);
 %% ref_data: gene expression matrix of reference samples
 %% network_path: the local network file e.g. UCEC_Gene_network.txt
 ```
-![fig2](https://github.com/user-attachments/assets/1a674360-76cb-48b2-b701-a635588c2bc5)
+![fig2](https://github.com/user-attachments/assets/e9388fc7-d839-4ae9-a2c7-ce3605b6c2fe)
+
 ```matlab
 sPGGM = calc_GlobalsPGGM(local_sPGGM,count,patient_label,patient_num);
 %% local_sPGGM: the output matrix from get_LocalsPGGM function
