@@ -6,10 +6,16 @@ The proposed sPGGM constructs candidate detection stages at the single-sample le
 
 
 ## Usage
-Download the source codes and unzip the UCEC_sample.rar. The code has been tested in Matlab R2021b and R4.4.1 and Python 3.9
-The implement of sPGGM on TCGA-UCEC dataset is shown as examples in this project. The input data can be changed with theother datasets if necessary.
+Download the source codes and upzip the data.rar.
+### Examples
+The TCGA-UCEC dataset consists of 434 tumor samples and 35 adjacent tumor samples. Based on the corresponding clinical information of TCGA, tumor samples are classified into different stages:  stage IA (167 samples), stage IB (148 samples), stage IC (25 samples), stage IIA (6 samples), stage IIB (13 samples), stage IIIA (40 samples), stage IIIB (6 samples), and stage IV (29 samples). The gene expression profiling data can be accessed at: https://portal.gdc.cancer.gov/projects/TCGA-UCEC. Several data files of UCEC are listed as follows:
+UCEC_gene.txt
+UCEC_normal.txt
+UCEC_tumor.txt
+UCEC_stage.txt
+UCEC_clinical.txt
+
 ### Step1 Get network from PPI network
-#### In python
 Run the "construct_network.py" program to obtain the local network of each center gene, which has been tested in Python 3.9.
 
 Input: All gene, e.g. UCEC_gene.txt
@@ -19,24 +25,29 @@ Output: The local network file constructed by PPI network——Gene_network.txt
 ### Step2 Calculate sPGGM score to identify the pre-disease stage
 Execute the MATLAB Live Script: main.mlx
 ### Usage
-```mat
+```matlab
 local_sPGGM = get_LocalsPGGM(case_data,ref_data,network_path);
+%% case_data: gene expression matrix of time-series case samples
+%% ref_data: gene expression matrix of reference samples
+%% network_path: the local network filepath constructed in step1
 ```
-case_data: gene expression matrix of time-series case samples
-
-ref_data: gene expression matrix of reference samples
-
-network_path: the local network filepath constructed in step1
-```
+case_data and ref_data figure
+```matlab
 sPGGM = calc_GlobalsPGGM(local_sPGGM,count,patient_label,patient_num);
+%% local_sPGGM: the output matrix from get_LocalsPGGM function
+%% patient_label: the output array from get_stage function
+%% patient_num: the output array from get_stage function
+```
+The parameters 'patient_label' and 'patient_num' can be generated as follow:
+```matlab
+[stage_lab,patient_label,patient_num]=get_stage('./data/UCEC_stage.txt');
 ```
 ### Step3 Survival analysis
-Execute the R script: survival.R
+Execute the R script: survival.R, which has been tested successfully in R4.4.1.
 
-Input: clinical file, e.g. UCEC_clinical.txt
+Input: clinical information, e.g. UCEC_clinical.txt
 
 Output: survival curves, which shows a significant difference in prognosis between patients diagnosed before and after the critical stage
 
-## Examples
-
-The TCGA-UCEC dataset consists of 434 tumor samples and 35 adjacent tumor samples. Based on the corresponding clinical information of TCGA, tumor samples are classified into different stages:  stage IA (167 samples), stage IB (148 samples), stage IC (25 samples), stage IIA (6 samples), stage IIB (13 samples), stage IIIA (40 samples), stage IIIB (6 samples), and stage IV (29 samples). The gene expression profiling data can be accessed at: https://portal.gdc.cancer.gov/projects/TCGA-UCEC.
+## Citation
+Jiayuan Zhong, Junxian Li, et al."sPGGM: a sample-perturbed Gaussian graphical model for identifying pre-disease stages and signaling molecules of disease progression"
