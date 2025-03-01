@@ -9,10 +9,15 @@ The proposed sPGGM constructs candidate detection stages at the single-sample le
 Download the source codes and upzip the data.rar.
 ### Examples
 The TCGA-UCEC dataset consists of 434 tumor samples and 35 adjacent tumor samples. Based on the corresponding clinical information of TCGA, tumor samples are classified into different stages:  stage IA (167 samples), stage IB (148 samples), stage IC (25 samples), stage IIA (6 samples), stage IIB (13 samples), stage IIIA (40 samples), stage IIIB (6 samples), and stage IV (29 samples). The gene expression profiling data can be accessed at: https://portal.gdc.cancer.gov/projects/TCGA-UCEC. Several data files of UCEC are listed as follows:
+
 UCEC_gene.txt
+
 UCEC_normal.txt
+
 UCEC_tumor.txt
+
 UCEC_stage.txt
+
 UCEC_clinical.txt
 
 ### Step1 Get network from PPI network
