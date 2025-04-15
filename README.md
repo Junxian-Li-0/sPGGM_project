@@ -2,7 +2,8 @@
 
 ## Overview
 Complex disease progression typically involves sudden and non-linear transitions accompanied by the devastating effects. Uncovering such critical states or pre-disease stages and discovering dynamic network biomarkers (signaling molecules) is vital for both comprehending disease progression and preventing or delaying disease deterioration. In this study, based on optimal transport theory and Gaussian graphical models, we present an innovative computational framework, the sample-perturbed Gaussian graphical model (sPGGM), designed to analyse disease progression and identify pre-disease stages at the specific sample/cell level. The proposed sPGGM constructs candidate detection stages at the single-sample level by utilizing a Gaussian graphical model embedded with prior knowledge of the PPI network and quantifies the distributional changes between the baseline and perturbed distributions through the application of optimal transport theory. Then sPGGM score is used to measure the critical transitions of complex diseases, with a marked increase signalling the pre-disease stage.
-![image](https://github.com/user-attachments/assets/615fb920-f60e-457a-8e8b-7251a463c0af)
+![image](https://github.com/user-attachments/assets/cb45ac8a-8c22-4a47-819e-be56b0b0b23c)
+
 
 
 
